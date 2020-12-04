@@ -41,6 +41,23 @@ public class Vertex {
 		this.y = y;
 	}
 
+	public double getX() {
+		return x;
+	}
+
+	public double getY() {
+		return y;
+
+	}
+
+	public boolean equals(Object thatObject) {
+		if (thatObject instanceof Vertex) {
+			Vertex that = (Vertex)thatObject;
+			return this.x==that.x && this.y==that.y;
+		}
+		return false;
+	}
+
 	public String toString() {
 		return "(" + x + "," + y + ")";
 	}
