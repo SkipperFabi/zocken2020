@@ -8,10 +8,6 @@ public class GeometricObject {
 
 	public GeometricObject(double width, double height, Vertex pos) { // Stellt sicher, dass keine Objects mit negativer
 																		// Breite oder Höhe erzeugt werden
-		this.pos = pos;
-		this.width = width;
-		this.height = height;
-
 		if (width < 0) {
 			width = -width;
 			pos.x = pos.x - width;
@@ -21,6 +17,9 @@ public class GeometricObject {
 			height = -height;
 			pos.y = pos.y - height;
 		}
+		this.pos = pos;
+		this.width = width;
+		this.height = height;
 	}
 
 	public GeometricObject(double width, double height) { // Konstruktor überladen mit Object beim Ursprung 0,0
