@@ -1,13 +1,17 @@
 package zocken2020;
 
+import java.awt.Color;
+
 public class GeometricObject {
 	public Vertex pos;
 	public double width;
 	public double height;
+	public Color color;
 	// Object im Raum chrakterisieren
 
-	public GeometricObject(double width, double height, Vertex pos) { // Stellt sicher, dass keine Objects mit negativer
-																		// Breite oder Höhe erzeugt werden
+	public GeometricObject(double width, double height, Vertex pos, Color color) { // Stellt sicher, dass keine Objects
+																					// mit negativer
+		// Breite oder Höhe erzeugt werden
 		if (width < 0) {
 			width = -width;
 			pos.x = pos.x - width;
@@ -20,6 +24,10 @@ public class GeometricObject {
 		this.pos = pos;
 		this.width = width;
 		this.height = height;
+	}
+
+	public GeometricObject(double width, double height, Vertex pos) {
+		this(width, height, pos, new Color(0, 0, 255));
 	}
 
 	public GeometricObject(double width, double height) { // Konstruktor überladen mit Object beim Ursprung 0,0
@@ -89,5 +97,5 @@ public class GeometricObject {
 
 	public Vertex getPos() {
 		return pos;
-	}
-}
+	} 
+} 
