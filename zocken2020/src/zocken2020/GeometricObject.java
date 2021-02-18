@@ -85,17 +85,4 @@ public class GeometricObject {
 		}
 		return false;
 	}
-
-	public double getWidth() {
-		return width;
-
-	}
-
-	public double getHeight() {
-		return height;
-	}
-
-	public Vertex getPos() {
-		return pos;
-	} 
-} 
+}
