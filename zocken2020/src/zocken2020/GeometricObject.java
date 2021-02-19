@@ -7,6 +7,7 @@ public class GeometricObject {
 	public double width;
 	public double height;
 	public Color color;
+	static double defaultSize = 10;
 	// Object im Raum chrakterisieren
 
 	public GeometricObject(double width, double height, Vertex pos, Color color) { // Stellt sicher, dass keine Objects
@@ -38,9 +39,13 @@ public class GeometricObject {
 											// bestimmt
 		this(width, width);
 	}
+	
+	public GeometricObject(Vertex pos) {
+        this(defaultSize, defaultSize, pos);
+    }
 
 	public GeometricObject() { // Konstruktor mit einem bestimmen Wert überladen, width und height =10
-		this(10);
+		this(defaultSize);
 	}
 
 	public String toString() {
