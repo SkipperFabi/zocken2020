@@ -9,6 +9,18 @@ public class GeometricObject {
 	public Color color;
 	static double defaultSize = 10;
 	// Object im Raum chrakterisieren
+	
+	public double getWidth() {
+		return width;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public Vertex getPos() {
+		return pos;
+	}
 
 	public GeometricObject(double width, double height, Vertex pos, Color color) { // Stellt sicher, dass keine Objects
 																					// mit negativer
